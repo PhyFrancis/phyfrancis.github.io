@@ -11,5 +11,4 @@ I used four ec2 m4.large instances, each running Ubuntu 16.04 ami. Each has 2 co
 * Kafka broker and producer is running on the Spark master node, consumer is running in any Spark driver process.
 
 The Hadoop cluster is mostly to provide its hdfs to support submitting Spark jobs in cluster mode, checkpoint for Spark’s stateful streaming process, as well as feeding Kafka producer. The data flow looks like:
-
-<img style="float: right;" src="/basic_aws_setup_for_cloud_computing/data_flow.png">
+![](/basic_aws_setup_for_cloud_computing/data_flow.png)
