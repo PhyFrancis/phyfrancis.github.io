@@ -12,4 +12,4 @@ I used four ec2 m4.large instances, each running Ubuntu 16.04 ami. Each has 2 co
 
 The Hadoop cluster is mostly to provide its hdfs to support submitting Spark jobs in cluster mode, checkpoint for Spark’s stateful streaming process, as well as feeding Kafka producer. The data flow looks like:
 
-[TODO picture goes here]
+![aaa](/data_flow.png)
