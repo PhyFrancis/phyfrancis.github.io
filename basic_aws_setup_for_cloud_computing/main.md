@@ -17,7 +17,7 @@ The Hadoop cluster is mostly to provide its hdfs to support submitting Spark job
 1. Spin up 4 ec2 instances with Ubuntu 16.04 ami.
 1. Download pre-built spark on each of them.
 1. Choose one to be master, the other 3 to be workers. Copy master’s security key onto workers so that master can reach workers through ssh. (which enables the master to spin up the workers through script as in step 5)
-1. On master node, add 3 workers’ public dns into the $SPARK_HOME/conf/slaves file.
+1. On master node, add 3 workers’ public (TODO can it be private) dns into the $SPARK_HOME/conf/slaves file.
 1. On master node, run $SMAPRK_HOME/sbin/start-all.sh
 1. [optional] add `export SPARK_PUBLIC_DNS="blabla"` to $SPARK_HOME/conf/spark-env.sh, for master and each worker. This is necessary to make the spark web UI work, otherwise the hyper links in the UI are all using a node’s  private dns.
 
