@@ -5,7 +5,7 @@ In this article I am writing down how I used aws ec2 to build my own computing c
 
 ## Machines & Stacks
 I used four ec2 m4.large instances, each running Ubuntu 16.04 ami. Each has 2 cores, 8G RAM, and 200G HDD disk. On this 4-node cluster, I deployed: 
-* Spark cluster in stand-alone mode, with one node being master and three others being workers.
+* Spark cluster in standalone mode, with one node being master and three others being workers.
 * Hadoop cluster, with the namenode being the same as the Spark master node, and other three nodes being data nodes. 
 * Cassandra cluster on all four machines.
 * Kafka broker and producer is running on the Spark master node, consumer is running in any Spark driver process.
