@@ -41,5 +41,14 @@ After the Cassandra cluster is deployed, you can check the status by running `no
 ![Cassandra](/basic_aws_setup_for_cloud_computing/cassandra.jpg)
 
 ### Ingest data through Kafka
-Following Kafka's [quick start guide](https://kafka.apache.org/quickstart), and that’s pretty much it. You pipe file to the producer, and spin up the consumer on a spark driver node, and the spark job should be able to pick up the data and run pipeline.
+Following Kafka's [quick start guide](https://kafka.apache.org/quickstart), and that’s pretty much it. You pipe file to the producer, and spin up the consumer on a spark driver node, and the Spark job pumps data through pipeline.
+
+Spark code looks like:
+```scala
+  val topicsSet = Set("cleaned_data")
+  val kafkaParams = Map[String, String]("metadata.broker.list" -> "172.31.5.186:9092")
+  val messages = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topicsSet)
+  
+  // 'messages' is the RDD that your Spark pipeline starts with.
+```
 
