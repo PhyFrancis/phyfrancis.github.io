@@ -22,7 +22,7 @@ The Hadoop cluster is mostly to provide its hdfs to support submitting Spark job
 1. [optional] add `export SPARK_PUBLIC_DNS="blabla"` to $SPARK_HOME/conf/spark-env.sh, for master and each worker. This is necessary to make the spark web UI work, otherwise the hyper links in the UI are all using a node’s  private dns.
 
 After the Spark cluster is deployed, the 8080 port of the master machine should look like:
-![Spark]()
+![Spark](/basic_aws_setup_for_cloud_computing/spark.jpg)
 
 Note that Spark in standalone mode, by itself, is almost useless because there is no hadoop or hdfs that comes along with the Spark in its standalone mode. As a result I can hardly submit any job in cluster mode, because the spark-submit command requires to provide jar file that all nodes can access. Without hdfs, I need to copy the same jar onto every single node and make sure they are in exact same path, plus I have no clue how to let each node output any cloud computing result. So next I decided to spin up my own Hadoop cluster.
 
