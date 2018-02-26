@@ -10,7 +10,7 @@ I used four ec2 m4.large instances, each running Ubuntu 16.04 ami. Each has 2 co
 * Cassandra running on all four nodes.
 * Kafka broker and producer is running on the Spark master node, consumer is running in any Spark driver process.
 
-The Hadoop cluster is mostly to provide its hdfs to support submitting Spark jobs in cluster mode, checkpoint for Spark’s stateful streaming process, as well as feeding Kafka producer. The data flow looks like:
+The Hadoop cluster is mostly to provide its hdfs to support submitting Spark jobs in [cluster mode](https://spark.apache.org/docs/latest/cluster-overview.html), checkpoint for Spark’s stateful streaming process, as well as feeding Kafka producer. The data flow looks like:
 ![data flow](/basic_aws_setup_for_cloud_computing/data_flow.jpg)
 
 ### Deploy Spark in standalong mode
