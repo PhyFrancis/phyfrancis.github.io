@@ -40,6 +40,6 @@ Use java 8, because java 9 doesn’t work well with cassandra 3.11. Cassandra is
 After the Cassandra cluster is deployed, you can check the status by running `nodetool status` on any node. Example:
 ![Cassandra](/basic_aws_setup_for_cloud_computing/cassandra.jpg)
 
-### Deploy Kafka
-WIP
+### Ingest data through Kafka
+Following Kafka's [quick start guide](https://kafka.apache.org/quickstart), and that’s pretty much it. You pipe file to the producer, and spin up the consumer on a spark driver node, and the spark job should be able to pick up the data and run pipeline.
 
