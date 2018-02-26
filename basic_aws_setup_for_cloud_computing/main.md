@@ -29,7 +29,7 @@ Note that Spark in standalone mode, by itself, is almost useless because there i
 ### Deploy HDFS cluster
 Simplest way is to follow this [post](https://linode.com/docs/databases/hadoop/how-to-install-and-set-up-hadoop-cluster/).
 
-Most import lesson I learned, and also a weird feature I found, is that you need a user with name ‘hadoop’ on every node in the cluster. Also note that master needs to be able to ssh to slaves.
+Most import lesson I learned, and also a weird feature I found, is that you need a user with name ‘hadoop’ on every node in the cluster. Also note that the 'hadoop' user on namenode needs to be able to ssh to slave nodes.
 
 ### Deploy Cassandra cluster
 Use java 8, because java 9 doesn’t work well with cassandra 3.11. Cassandra is easier to deploy since it’s de-centralized and I just need to start cassandra separately on each node.
