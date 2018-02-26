@@ -33,8 +33,12 @@ Most import lesson I learned, and also a weird feature I found, is that you need
 
 After Hadoop cluster is deployed, the 50070 port of the namenode should look like:
 ![Hadoop](/basic_aws_setup_for_cloud_computing/hadoop.jpg)
+
 ### Deploy Cassandra cluster
-Use java 8, because java 9 doesn’t work well with cassandra 3.11. Cassandra is easier to deploy since it’s de-centralized and I just need to start cassandra separately on each node.
+Use java 8, because java 9 doesn’t work well with cassandra 3.11. Cassandra is easier to deploy since it’s de-centralized and I just need to start cassandra separately on each node, after that the Gossip membership list mechanism will automatically add the node into the cluster.
+
+After the Cassandra cluster is deployed, you can check the status by running `nodetool status` on any node. Example:
+![Cassandra](/basic_aws_setup_for_cloud_computing/cassandra.jpg)
 
 ### Deploy Kafka
 WIP
