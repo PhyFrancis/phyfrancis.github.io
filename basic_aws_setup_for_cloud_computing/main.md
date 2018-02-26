@@ -24,10 +24,16 @@ The Hadoop cluster is mostly to provide its hdfs to support submitting Spark job
 After the Spark cluster is deployed, the 8080 port of the master machine should look like:
 ![Spark](/basic_aws_setup_for_cloud_computing/spark.jpg)
 
-Note that Spark in standalone mode, by itself, is almost useless because there is no hadoop or hdfs that comes along with the Spark in its standalone mode. As a result I can hardly submit any job in cluster mode, because the spark-submit command requires to provide jar file that all nodes can access. Without hdfs, I need to copy the same jar onto every single node and make sure they are in exact same path, plus I have no clue how to let each node output any cloud computing result. So next I decided to spin up my own Hadoop cluster.
+Note that Spark in standalone mode, by itself, is almost useless because there is no hadoop or hdfs that comes along with the Spark in its standalone mode. As a result I can hardly submit any job in cluster mode, because the spark-submit command requires to provide jar file that all nodes can access. Without hdfs, I need to copy the same jar onto every single node and make sure they are in exact same path, plus I have no clue how to let each node output any cloud computing result.
 
-How to build my own Cassandra cluster:
-Use java 8, because java 9 doesn’t work well with cassandra 3.11
-Cassandra is easier to deploy since it’s de-centralized and I just need to start cassandra separately on each node.
-[WARNING] make sure to test the schema if it supports the query in question, e.g. does sorting work for a given column?
+### Deploy HDFS cluster
+Simplest way is to follow this [post](https://linode.com/docs/databases/hadoop/how-to-install-and-set-up-hadoop-cluster/).
+
+Most import lesson I learned, and also a weird feature I found, is that you need a user with name ‘hadoop’ on every node in the cluster. Also note that master needs to be able to ssh to slaves.
+
+### Deploy Cassandra cluster
+Use java 8, because java 9 doesn’t work well with cassandra 3.11. Cassandra is easier to deploy since it’s de-centralized and I just need to start cassandra separately on each node.
+
+### Deploy Kafka
+WIP
 
