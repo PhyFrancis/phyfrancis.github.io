@@ -13,7 +13,7 @@
   * [WIP]
 
 # Example
-![google search](/software_engineer_jobs/google_search_demo.webm)
+![google search](/software_engineer_jobs/google_search_demo.gif)
 
 ### Frontend code
 
