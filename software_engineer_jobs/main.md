@@ -13,7 +13,14 @@
   * [WIP]
 
 # Example
+
+### UI
 ![google search](/software_engineer_jobs/google_search_demo.gif)
+
+*Disclamer: Above is the official Google search site. The later sections are not
+real design/code for this demo, but are just showing example implementation.*
+
+### Architect
 
 ### Frontend code
 
