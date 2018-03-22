@@ -8,8 +8,29 @@
   * Responsibility: develop server interface and domain logic to serve requests
     from front end.
   * Programming languages: Java, C++, Python, etc.
-  * Popular frameworks: Jetty/Jersey/Jackson
+  * Popular libraries: Jetty/Jersey/Jackson
 * Development operations (DevOps)
   * [WIP]
 
 # Example
+![google search](/software_engineer_jobs/google_search_demo.webm)
+
+### Frontend code
+
+### Backend code
+```Java
+package com.example;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+@Path("")
+public class MyResource {
+    @GET
+    @Produces("text/plain")
+    public String getIt() {
+        return "Got it!";
+    }
+}
+```
