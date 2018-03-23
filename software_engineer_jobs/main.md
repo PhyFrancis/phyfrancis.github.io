@@ -20,11 +20,12 @@
 *Disclamer: Above is the official Google search site. The later sections are not
 real design/code for this demo, but are just showing example implementation.*
 
-### Architect
+### (Toy model) Architect
+![architect](/software_engineer_jobs/google_search_demo.gif)
 
-### Frontend code
+### (Toy model) Frontend code
 
-### Backend code
+### (Toy model) Backend code
 ```Java
 package com.example;
 
