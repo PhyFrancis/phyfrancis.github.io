@@ -21,7 +21,7 @@
 real design/code for this demo, but are just showing example implementation.*
 
 ### (Toy model) Architect
-![architect](/software_engineer_jobs/architect.jpg)
+![architecture](/software_engineer_jobs/architecture.jpg)
 
 ### (Toy model) Frontend code
 
