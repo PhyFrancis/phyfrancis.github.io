@@ -21,7 +21,7 @@
 real design/code for this demo, but are just showing example implementation.*
 
 ### (Toy model) Architect
-![architect](/software_engineer_jobs/google_search_demo.gif)
+![architect](/software_engineer_jobs/architect.jpg)
 
 ### (Toy model) Frontend code
 
