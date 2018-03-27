@@ -31,15 +31,16 @@ real design/code for this demo, but are just showing example implementation.*
 
 <input type="text" id="searchBox"><br>
 <button onclick="search()">Google Search</button>
+<div id="demo"></div>
 
+<script>
 function search() {
   const query = document.getElementById("searchBox").value;
   $.ajax({url: "/search?q=" + query, success: function(result){
       $("#demo").html(result);
   }});
 }
-
-<div id="demo"></div>
+</script>
 
 </body>
 </html>
