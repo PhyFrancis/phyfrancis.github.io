@@ -20,13 +20,33 @@
 *Disclamer: Above is the official Google search site. The later sections are not
 real design/code for this demo, but are just showing example implementation.*
 
-### (Toy model) Architect
+### Architect (Toy model)
 ![architecture](/software_engineer_jobs/architecture.png)
 
-### (Toy model) Frontend code
+### Frontend development (Toy model)
+```html
+<!DOCTYPE html>
+<html>
+<body>
 
-### (Toy model) Backend code
-```Java
+<input type="text" id="searchBox"><br>
+<button onclick="search()">Google Search</button>
+
+function search() {
+  const query = document.getElementById("searchBox").value;
+  $.ajax({url: "/search?q=" + query, success: function(result){
+      $("#demo").html(result);
+  }});
+}
+
+<div id="demo"></div>
+
+</body>
+</html>
+```
+
+### Backend development (Toy model)
+```java
 package com.example;
 
 import javax.ws.rs.GET;
