@@ -10,5 +10,10 @@ Separating filesystem interface and filesystem implementation. So all filesystem
 
 New filesystem can be supported dynamically, by registering its implementation into a virtual-table-like data structure in kernel.
 
-## I/O scheduler for block devices 
+## I/O scheduler for block devices
 Reading block devices is slow because the device (e.g. a hdd disk) needs mechanically move its read head. The scheduler reduces the overhead by batching together the read requests that are reading adjacent regions.
+
+## Linux filesystem
+Main advantage of ext3 over ext2 is that the former supports
+[journaling](https://en.wikipedia.org/wiki/Journaling_file_system), which can
+guarantee atomiticity at system call level.
